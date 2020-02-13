@@ -9,6 +9,11 @@ body {
   box-sizing: border-box;
 }
 
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
 /* 숨김 컨텐츠 */
 .a11yHidden {
   position: absolute;
@@ -207,13 +212,26 @@ body {
   animation-duration: 3.3s;
 }
 
+@keyframes mainAni {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+    transform: translate(0, 30%);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+}
+
 .drink {
   position: relative;
   min-height: 380px;
   background: #F5F5F5;
   text-align: center;
   animation-name: mainAni;
-  cursor: pointer;
 }
 
 .drink:nth-child(n) img {
@@ -244,6 +262,10 @@ body {
   transform: scale(1.1);
 }
 
+.drinkThumb {
+  cursor: pointer;
+}
+
 .drinkCaption {
   font-size: 1.8em;
   padding-bottom: 8%;
@@ -254,10 +276,9 @@ body {
 }
 
 .drinkInfo {
-  display: flex;
+  display: none;
   flex-flow: column wrap;
   text-align: left;
-  display: none;
   position: absolute;
   top: 0;
   left: 0;
@@ -338,19 +359,4 @@ body {
   transform: translateY(-50%) rotate(-45deg) scale(.6);
 }
 
-/* @keyframes fadeOutAni {
-  0% {
-    opacity: 1;
-  } 
-
-  100% {
-    opacity: 0;
-  }
-}
-
-.fadeOut{
-  animation-name: fadeOutAni;
-  animation-duration: .8s;
-  animation-timing-function: ease-out;
-} */
 
