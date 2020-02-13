@@ -38,5 +38,3 @@ for(let i = 0; i < drinkThumbs.length; i ++){
 }
 
 
-
-
